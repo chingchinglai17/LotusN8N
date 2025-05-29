@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link  rel="stylesheet" href="main.css">
+ 
+  <title>蓮藕產品訂購表單</title>
+  
+</head>
+<body>
+  <div class="container">
+    <!-- 左邊輸入區 -->
+    <div class="form-section">
+      <h2>訂購資料</h2>
+      <label>訂購日期：
+        <input type="date" id="orderDate">
+      </label>
+      <label type="date" id="orderDate" name="orderDate">平台選擇：
+        <select id="platform" name="platform">
+          <option value="FB名稱">FB名稱</option>
+          <option value="LINE名稱">LINE名稱</option>
+        </select>
+      </label>
+      <label>訂購人姓名：
+        <input type="text" id="buyerName">
+      </label>
+      <label>收件人姓名：
+        <input type="text" id="receiverName">
+      </label>
+      <label>收件人地址：
+        <input type="text" id="address">
+      </label>
+      <label>收件人電話：
+        <input type="tel" id="phone">
+      </label>
+
+      <h3>商品選擇</h3>
+      <div class="product">
+        <label class="product-label">去膜去芯1斤/450元</label>
+        <input type="number" class="qty-input" data-price="450" data-weight="1" min="0" placeholder="輸入數量">
+      </div>
+      <div class="product">
+        <label class="product-label">含膜去芯1斤/420元</label>
+        <input type="number" class="qty-input" data-price="420" data-weight="1" min="0" placeholder="輸入數量">
+      </div>
+      <div class="product">
+        <label class="product-label">含膜含芯1斤/400元</label>
+        <input type="number" class="qty-input" data-price="400" data-weight="1" min="0" placeholder="輸入數量">
+      </div>
+      <div class="product">
+        <label class="product-label">蓮藕粉1斤/500元</label>
+        <input type="number" class="qty-input" data-price="500" data-weight="1" min="0" placeholder="輸入數量">
+      </div>
+      <div class="product">
+        <label class="product-label">蓮芯100g/125元</label>
+        <input type="number" class="qty-input" data-price="125" data-weight="0.1" min="0" placeholder="輸入數量">
+      </div>
+
+      <h3>運費選擇</h3>
+      <label><input type="radio" name="shipping" value="cold" checked> 黑貓冷藏</label>
+      <label><input type="radio" name="shipping" value="post"> 郵局常溫</label>
+    </div>
+
+    <!-- 右邊摘要區 -->
+    <div class="summary-section">
+      <div id="orderSummary"></div>
+      <button onclick="submitForm()">送出訂單</button>
+      <div id="submitStatus"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

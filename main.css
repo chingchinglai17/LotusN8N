@@ -1,0 +1,112 @@
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 20px;
+  background: #f5f5f5;
+}
+
+/* Container styles (you already have these) */
+.container {
+  display: flex;
+  flex-wrap: wrap; /* or nowrap if you prefer, but manage child widths */
+  gap: 20px; /* Simplified gap if it's the same for row and column */
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Styles for the children */
+.form-section {
+  flex: 2; /* Example: form section takes up 2/3 of the space */
+  /* Add min-width if you don't want it to become too narrow */
+  min-width: 300px; /* Example minimum width */
+}
+
+.summary-section {
+  flex: 1; /* Example: summary section takes up 1/3 of the space */
+  /* Add min-width if you don't want it to become too narrow */
+  min-width: 250px; /* Example minimum width */
+}
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="date"],
+input[type="number"],
+select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 4px;
+  /* margin-bottom: 10px; */
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+.product {
+  margin-bottom: 10px;
+}
+
+button {
+  margin-top: 20px;
+  padding: 12px 20px;
+  background-color: #007bff;
+  border: none;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* 針對 orderSummary 區塊的樣式 */
+#orderSummary {
+  display: flex;
+  flex-direction: column; /* 讓內部元素垂直排列 */
+  min-height: 800px;     /* 設定您想要的最小高度，例如 450px */
+                          /* 您也可以使用 height: 100%; 如果其父元素有定義高度且希望填滿 */
+  padding: 20px;         /* 可選：增加一些內部間距 */
+  box-sizing: border-box; /* 讓 padding 和 border 不會影響指定的總高度和寬度 */
+  border: 1px solid #ccc; /* 可選：方便觀察區塊範圍的邊框 */
+}
+
+/* 針對「送出訂單」按鈕的樣式 */
+/* 假設按鈕是 #orderSummary 內的 <button> 元素，並且有 onclick="submitForm()" 屬性 */
+#orderSummary button[onclick="submitForm()"] {
+  margin-top: auto;    /* 這是關鍵：將按鈕推到容器底部 */
+  margin-bottom: 10px; /* 可選：按鈕與下方 submitStatus 之間的間距 */
+  padding: 12px 20px;  /* 可選：按鈕本身的內間距 */
+  width: 100%;         /* 可選：讓按鈕寬度與 #orderSummary 相同 (會受到 #orderSummary 的 padding 影響) */
+  /* 其他您需要的按鈕樣式，例如背景顏色、文字顏色等 */
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+}
+
+/* 可選：針對 submitStatus 的樣式 */
+#submitStatus {
+  text-align: center; /* 例如，讓提交狀態的文字居中 */
+  margin-top: 10px;   /* 與按鈕之間的間距 */
+}
+
+/* 手機版調整 */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .form-section,
+  .summary-section {
+    flex: 1 1 100%;
+  }
+}
