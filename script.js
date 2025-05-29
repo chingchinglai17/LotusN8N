@@ -98,7 +98,7 @@ function submitForm() {
   };
 
   // 請務必將此 URL 替換為您重新部署後的 Google Apps Script 網路應用程式 URL
-  const scriptURL = "https://script.google.com/macros/s/AKfycbywWJn7VpyEIjWazDihS29bq-fcQUz1HkBZtf0BoO8/dev"; 
+  const scriptURL = "https://script.google.com/macros/s/AKfycbwoVDwwr1DTs58ZztfmEPqTEXU6cOdwcBoHWrRYDXZqXosMbtGBszrh8wqSi2YldKoJ/exec"; 
 
   const submitStatusEl = document.getElementById("submitStatus");
   submitStatusEl.innerText = "正在送出訂單..."; // 顯示正在提交的狀態
