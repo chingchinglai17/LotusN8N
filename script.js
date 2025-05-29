@@ -144,7 +144,7 @@ function submitForm() {
 
   // 請務必將此 URL 替換為您重新部署後的 Google Apps Script 網路應用程式 URL
   // 這裡保留您 script.js 中原有的 URL
-  const scriptURL = "https://script.google.com/macros/s/AKfycbwoVDwwr1DTs58ZztfmEPqTEXU6cOdwcBoHWrRYDXZqXosMbtGBszrh8wqSi2YldKoJ/exec"; 
+  const scriptURL = "https://script.google.com/macros/s/AKfycbzUFWJNytEcFEh0KuquGNORzuBnXvuFk9W30tWO6dR0p5HU5rLsRBXZ5LDzqbrAOcek/exec"; 
 
   const submitStatusEl = document.getElementById("submitStatus");
   submitStatusEl.innerText = "正在送出訂單...";
